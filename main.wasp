@@ -56,5 +56,5 @@ page TattooGalleryPage {
 route AppointmentBookingRoute { path: "/appointments", to: AppointmentBookingPage }
 page AppointmentBookingPage {
   component: import AppointmentBookingPage from "@src/pages/AppointmentBooking.jsx",
-  authRequired: true
+  authRequired: false
 }
