@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: wasp-app
+    env: node
+    repo: https://github.com/tuusuario/tu-repo
+    branch: main
+    buildCommand: wasp build
+    startCommand: wasp start
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: wasp-db
+          property: connectionString
+
+databases:
+  - name: wasp-db
+    databaseName: wasp
+    user: wasp_user
